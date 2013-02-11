@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-10 10:15-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: basic/forms.py:5
+msgid "Username"
+msgstr ""
+
+#: basic/forms.py:6
+msgid "Password"
+msgstr ""
+
+#: basic/views.py:12 basic/views.py:14
+msgid "visitor"
+msgstr "guest"
+
+#: basic/views.py:43
+msgid "Your account has been disabled!"
+msgstr ""
+
+#: basic/views.py:45
+msgid "Your username or password were incorrect"
+msgstr ""
+
+#: basic/views.py:47
+msgid "Please, write your credentials"
+msgstr ""

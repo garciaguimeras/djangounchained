@@ -1,13 +1,17 @@
-from django.shortcuts import render_to_response, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
+from django.utils.translation import ugettext
 
 from forms import LoginForm
 
 def basic_home(request):
     user = request.user
+    
+    print request.LANGUAGE_CODE
+    print ugettext("visitor")
 
-    user_name = "visitor"
+    user_name = ugettext("visitor")
     if user.is_authenticated():
         user_name = user.first_name + " " + user.last_name + " (" + user.username + ")"
         
@@ -36,11 +40,11 @@ def basic_login(request):
                     login(request, user)
                     return redirect(next_page)
                 else:
-                    error_message = "Your account has been disabled!"
+                    error_message = ugettext("Your account has been disabled!")
             else:
-                error_message = "Your username or password were incorrect"
+                error_message = ugettext("Your username or password were incorrect")
         else:
-            error_message = "Please, write your credentials"                
+            error_message = ugettext("Please, write your credentials")
     
     params = {"error_message": error_message, "next": next_page, "form": form}
     return render_to_response("basic/login.html", params, context_instance = RequestContext(request))
